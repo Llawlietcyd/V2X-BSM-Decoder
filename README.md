@@ -33,13 +33,15 @@ v2x_project/
 ```bash
 pip install pyshark pycrate
 
- Usage
-1. Connect your DSRC-capable device (e.g. OBU)
-Make sure it's visible as a network interface (e.g. enp0s31f6, wlan0, etc.)
+## 🚀 Usage
 
-2. Run the decoder
+### 1. Connect your DSRC-capable device (e.g. OBU)
+Make sure it's visible as a network interface (e.g. `enp0s31f6`, `wlan0`, etc.)
+
+### 2. Run the decoder
+
+```bash
 python3 bsm_decoder_standalone.py
-By default, it listens on interface enp0s31f6. You can change this in the script:
 
 decoder = BSMDecoder(interface_name='your_interface_here')
 📦 Output
