@@ -30,8 +30,7 @@ v2x_project/
 - [pycrate](https://github.com/P1sec/pycrate) – for ASN.1 decoding
 - Wireshark must be installed (for pyshark to work)
 
-```bash
-pip install pyshark pycrate
+
 
 ## 🚀 Usage
 
@@ -39,12 +38,11 @@ pip install pyshark pycrate
 Make sure it's visible as a network interface (e.g. `enp0s31f6`, `wlan0`, etc.)
 
 ### 2. Run the decoder
-
-```bash
 python3 bsm_decoder_standalone.py
 
 decoder = BSMDecoder(interface_name='your_interface_here')
-📦 Output
+
+###📦 Output
 Messages containing "0014" (BSM) are captured, decoded, and printed every second.
 
 Output format: structured JSON
