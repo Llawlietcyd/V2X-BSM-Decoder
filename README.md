@@ -32,3 +32,41 @@ v2x_project/
 
 ```bash
 pip install pyshark pycrate
+
+ Usage
+1. Connect your DSRC-capable device (e.g. OBU)
+Make sure it's visible as a network interface (e.g. enp0s31f6, wlan0, etc.)
+
+2. Run the decoder
+python3 bsm_decoder_standalone.py
+By default, it listens on interface enp0s31f6. You can change this in the script:
+
+decoder = BSMDecoder(interface_name='your_interface_here')
+📦 Output
+Messages containing "0014" (BSM) are captured, decoded, and printed every second.
+
+Output format: structured JSON
+
+Example:
+{
+  "messageId": 20,
+  "value": {
+    "coreData": {
+      "msgCnt": 58,
+      "lat": 401042907,
+      "long": -831334996,
+      "speed": 10,
+      ...
+    }
+  }
+}
+📌 Notes
+The out.py file is generated from SAE J2735 ASN.1 definitions using pycrate_asn1c. If needed, you can regenerate it from SPAT.asn / J2735.asn.
+
+This version only supports BSM (Message ID 20 / 0x14), but can be extended to support SPaT, MAP, etc.
+
+🧠 Author
+Developed by Yidian Chen
+Originally adapted from a ROS 2 project v2x_send_spat.
+
+
