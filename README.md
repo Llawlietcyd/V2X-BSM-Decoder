@@ -42,7 +42,7 @@ python3 bsm_decoder_standalone.py
 
 decoder = BSMDecoder(interface_name='your_interface_here')
 
-###📦 Output
+##  Output
 Messages containing "0014" (BSM) are captured, decoded, and printed every second.
 
 Output format: structured JSON
@@ -60,12 +60,12 @@ Example:
     }
   }
 }
-📌 Notes
+### 📌 Notes
 The out.py file is generated from SAE J2735 ASN.1 definitions using pycrate_asn1c. If needed, you can regenerate it from SPAT.asn / J2735.asn.
 
 This version only supports BSM (Message ID 20 / 0x14), but can be extended to support SPaT, MAP, etc.
 
-🧠 Author
+### 🧠 Author
 Developed by Yidian Chen
 Originally adapted from a ROS 2 project v2x_send_spat.
 
