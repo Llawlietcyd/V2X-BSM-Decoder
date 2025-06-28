@@ -32,6 +32,10 @@ v2x_project/
 - [pycrate](https://github.com/P1sec/pycrate) – for ASN.1 decoding
 - Wireshark must be installed (for pyshark to work)
 
+Install with:
+
+```bash
+pip install pyshark pycrate
 
 
 ## 🚀 Usage
