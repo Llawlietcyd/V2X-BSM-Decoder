@@ -17,9 +17,11 @@ It extracts and decodes J2735 Message ID `0x14` (BSM) in real time, using live n
 
 ## 📁 Project Structure
 
+```
 v2x_project/
-├── bsm_decoder_standalone.py # Main script (run this)
-└── out.py # Auto-generated J2735 ASN.1 decoder (via pycrate)
+├── bsm_decoder_standalone.py   # Main script (run this)
+└── out.py                      # Auto-generated J2735 ASN.1 decoder (via pycrate)
+```
 
 ---
 
