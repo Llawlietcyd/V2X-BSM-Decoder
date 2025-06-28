@@ -32,20 +32,23 @@ v2x_project/
 - [pycrate](https://github.com/P1sec/pycrate) – for ASN.1 decoding
 - Wireshark must be installed (for pyshark to work)
 
+
 Install with:
 
 ```bash
 pip install pyshark pycrate
+```
 
+---
 
 ## 🚀 Usage
 
 ### 1. Connect your DSRC-capable device (e.g. OBU)
 Make sure it's visible as a network interface (e.g. `enp0s31f6`, `wlan0`, etc.)
-
 ### 2. Run the decoder
+```
 python3 bsm_decoder_standalone.py
-
+```
 decoder = BSMDecoder(interface_name='your_interface_here')
 
 ##  Output
@@ -54,6 +57,7 @@ Messages containing "0014" (BSM) are captured, decoded, and printed every second
 Output format: structured JSON
 
 Example:
+```
 {
   "messageId": 20,
   "value": {
@@ -66,6 +70,7 @@ Example:
     }
   }
 }
+```
 ### 📌 Notes
 The out.py file is generated from SAE J2735 ASN.1 definitions using pycrate_asn1c. If needed, you can regenerate it from SPAT.asn / J2735.asn.
 
